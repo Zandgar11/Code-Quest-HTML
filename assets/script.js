@@ -36,9 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const additionalCode = additionalEditor.value.trim();
             console.log("Défis supplémentaires soumis :", additionalCode);
 
-            // Ici, vous pouvez ajouter des validations pour les défis supplémentaires si nécessaire
-            additionalResult.textContent = "Défis supplémentaires soumis !";
-            additionalResult.style.color = "#69b668"; // Couleur du texte en cas de succès
+            // Vérification du défi supplémentaire
+            if (additionalCode === "a = 5\nb = 3\nresultat = a * b") {
+                additionalResult.textContent = "Défi réussi ! Vous avez correctement multiplié les variables.";
+                additionalResult.style.color = "#69b668"; // Couleur du texte en cas de succès
+            } else {
+                additionalResult.textContent = "Essayez encore !";
+                additionalResult.style.color = "#e5e5e5"; // Couleur du texte en cas d'échec
+            }
         });
     }
 });

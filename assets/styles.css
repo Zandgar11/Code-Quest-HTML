@@ -93,10 +93,7 @@ button {
 }
 
 button:hover {
-    background-color: #366035; /* Couleur du bouton au survol */
-    /* Ancienne couleur :
-       background-color: #ace1ce;
-    */
+    background-color: #366035;
 }
 
 /* Styles pour l'éditeur de code */

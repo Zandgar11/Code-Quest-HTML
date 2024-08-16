@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapitre 1 : Variables et Opérations</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="icon" href="../images/favicon.png">
 </head>
 <body>
     <header>
@@ -15,60 +16,56 @@
             <h2>Introduction aux Variables</h2>
             <p>Une variable est un espace de mémoire utilisé pour stocker une valeur qui peut être utilisée et modifiée au cours du programme.</p>
             <pre><code>x = 10  # x est une variable contenant la valeur 10</code></pre>
-            <p>Les variables en Python ne nécessitent pas de déclaration explicite de type. Vous pouvez stocker différents types de données dans des variables, tels que des nombres, des chaînes de caractères, des listes, etc.</p>
         </section>
+
         <section>
-            <h2>Types de Données</h2>
-            <p>Voici quelques types de données courants en Python :</p>
+            <h2>Types de Données en Python</h2>
+            <p>Python prend en charge plusieurs types de données de base :</p>
             <ul>
-                <li><strong>Entiers :</strong> Représentent des nombres sans décimales. Exemple : <code>x = 5</code></li>
-                <li><strong>Flottants :</strong> Représentent des nombres avec des décimales. Exemple : <code>y = 3.14</code></li>
-                <li><strong>Chaînes de Caractères :</strong> Représentent des textes. Exemple : <code>nom = "Alice"</code></li>
-                <li><strong>Booléens :</strong> Représentent des valeurs de vérité. Exemple : <code>est_vrai = True</code></li>
+                <li><strong>int</strong> : Nombre entier. Ex: <code>x = 5</code></li>
+                <li><strong>float</strong> : Nombre à virgule flottante. Ex: <code>y = 3.14</code></li>
+                <li><strong>str</strong> : Chaîne de caractères. Ex: <code>nom = "Alice"</code></li>
+                <li><strong>bool</strong> : Valeur booléenne (Vrai ou Faux). Ex: <code>est_vrai = True</code></li>
             </ul>
-            <pre><code>
-# Exemple de variables
-nombre_entier = 10
-nombre_flottant = 3.14
-texte = "Bonjour"
-booleen = True
-            </code></pre>
+            <p>Vous pouvez vérifier le type d'une variable en utilisant la fonction <code>type()</code> :</p>
+            <pre><code>type(x)  # Retourne <class 'int'></code></pre>
         </section>
+
         <section>
-            <h2>Opérations de Base</h2>
-            <p>Les variables peuvent être utilisées pour effectuer des opérations de base :</p>
+            <h2>Opérations de Base avec les Variables</h2>
+            <p>En Python, vous pouvez effectuer des opérations arithmétiques de base comme :</p>
             <ul>
-                <li><strong>Addition :</strong> <code>somme = a + b</code></li>
-                <li><strong>Soustraction :</strong> <code>difference = a - b</code></li>
-                <li><strong>Multiplication :</strong> <code>produit = a * b</code></li>
-                <li><strong>Division :</strong> <code>quotient = a / b</code></li>
+                <li><code>+</code> : Addition</li>
+                <li><code>-</code> : Soustraction</li>
+                <li><code>*</code> : Multiplication</li>
+                <li><code>/</code> : Division</li>
+                <li><code>%</code> : Modulo (reste de la division)</li>
             </ul>
-            <pre><code>
-a = 5
+            <pre><code>a = 10
 b = 3
-somme = a + b  # Résultat : 8
-difference = a - b  # Résultat : 2
-produit = a * b  # Résultat : 15
-quotient = a / b  # Résultat : 1.6667
-            </code></pre>
+somme = a + b  # Résultat : 13
+produit = a * b  # Résultat : 30
+reste = a % b  # Résultat : 1</code></pre>
         </section>
+
         <section>
-            <h2>Défi</h2>
-            <p>Modifiez la valeur de la variable <code>x</code> pour qu'elle soit égale à 20.</p>
-            <!-- Utilisation de textarea pour permettre la modification -->
-            <textarea id="editor" rows="5">x = 10</textarea>
+            <h2>Défi 1 : Modification d'une variable</h2>
+            <p>Modifiez la valeur de la variable <code>x</code> pour qu'elle soit égale à <code>20</code>.</p>
+            <textarea id="editor" rows="3">x = </textarea>
             <button id="submitBtn">Soumettre</button>
             <p id="result"></p>
         </section>
+
         <section>
-            <h2>Défis Supplémentaires</h2>
-            <p>Essayez de résoudre ces défis supplémentaires :</p>
-            <ul>
-                <li><strong>Défi 1 :</strong> Créez une variable <code>nom</code> et assignez-lui votre prénom. Affichez cette variable.</li>
-                <li><strong>Défi 2 :</strong> Créez une variable <code>age</code> et assignez-lui votre âge. Affichez cette variable avec un message comme : "J'ai 25 ans".</li>
-                <li><strong>Défi 3 :</strong> Créez une variable <code>note</code> qui contient une note sur 20. Calculez et affichez le pourcentage de cette note sur 100.</li>
-            </ul>
-            <p>Essayez de résoudre ces défis et soumettez vos réponses dans l'éditeur de code.</p>
+            <h2>Défis supplémentaires</h2>
+            <p>Essayez ces défis supplémentaires pour consolider votre apprentissage :</p>
+
+            <!-- Défi supplémentaire 1 -->
+            <h3>Défi 2 : Multiplication de variables</h3>
+            <p>Créez deux variables, <code>a</code> et <code>b</code>, avec les valeurs <code>5</code> et <code>3</code>, puis multipliez-les ensemble et stockez le résultat dans une variable <code>resultat</code>.</p>
+            <textarea id="additional-editor" rows="3">a = </textarea>
+            <button id="submitAdditionalBtn">Soumettre</button>
+            <p id="additional-result"></p>
         </section>
     </main>
     <footer>
