@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2 : Boucles, Conditions et Fonctions</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+    <script src="../assets/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="CodeQuest Logo" class="logo">
+        <h1>Chapitre 2 : Boucles, Conditions et Fonctions</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Introduction aux Boucles</h2>
+            <p>Les boucles sont utilisées pour exécuter un bloc de code plusieurs fois. Python supporte principalement deux types de boucles : <code>for</code> et <code>while</code>.</p>
+            <h3>Boucle <code>for</code></h3>
+            <pre><code>for i in range(5):
+    print(i)  # Affiche les nombres de 0 à 4</code></pre>
+            <h3>Boucle <code>while</code></h3>
+            <pre><code>i = 0
+while i < 5:
+    print(i)
+    i += 1  # Affiche les nombres de 0 à 4</code></pre>
+        </section>
+
+        <section>
+            <h2>Introduction aux Conditions</h2>
+            <p>Les conditions permettent de diriger le flux d'exécution du programme en fonction de la satisfaction d'une condition.</p>
+            <pre><code>x = 10
+if x > 5:
+    print("x est supérieur à 5")</code></pre>
+            <p>Vous pouvez également utiliser les structures <code>elif</code> et <code>else</code> pour plus de flexibilité.</p>
+            <pre><code>x = 10
+if x > 10:
+    print("x est supérieur à 10")
+elif x == 10:
+    print("x est égal à 10")
+else:
+    print("x est inférieur à 10")</code></pre>
+        </section>
+
+        <section>
+            <h2>Fonctions</h2>
+            <h3>Définir une Fonction</h3>
+            <pre><code>def nom_de_la_fonction(param1, param2):
+    # Code à exécuter
+    return resultat</code></pre>
+            <h3>Exemple de Fonction</h3>
+            <pre><code>def saluer(nom):
+    return f"Bonjour, {nom}!"</code></pre>
+            <h3>Arguments et Valeurs de Retour</h3>
+            <pre><code>def multiplier(a, b):
+    return a * b
+
+resultat = multiplier(4, 5)  # resultat est 20</code></pre>
+            <h3>Fonctions avec Valeurs Par Défaut</h3>
+            <pre><code>def saluer(nom="invité"):
+    return f"Bonjour, {nom}!"</code></pre>
+        </section>
+
+        <section>
+            <h2>Défi</h2>
+            <p>Écrivez une fonction <code>compte_pairs(n)</code> qui retourne le nombre de nombres pairs de 1 à n.</p>
+            <div id="editor" style="height: 200px; width: 100%;">
+def compte_pairs(n):
+    return len([i for i in range(1, n+1) if i % 2 == 0])
+            </div>
+            <button id="submit-code">Soumettre</button>
+            <p id="feedback"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CodeQuest. Tous droits réservés.</p>
+    </footer>
+    
+    <script>
+        // Initialise l'éditeur Ace
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+
+        // Gestionnaire pour le bouton de soumission
+        document.getElementById('submit-code').addEventListener('click', function() {
+            let userCode = editor.getValue();
+            try {
+                let func = new Function('return ' + userCode)();
+                if (typeof func === 'function' && func(10) === 5) {
+                    document.getElementById('feedback').innerText = 'Bravo ! Votre fonction est correcte.';
+                } else {
+                    document.getElementById('feedback').innerText = 'Essayez encore.';
+                }
+            } catch (e) {
+                document.getElementById('feedback').innerText = 'Erreur dans votre code. Vérifiez la syntaxe.';
+            }
+        });
+    </script>
+</body>
+</html>

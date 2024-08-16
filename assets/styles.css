@@ -1,0 +1,114 @@
+/* Couleurs principales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #20232a; /* Fond sombre pour un contraste élevé */
+    color: #e5e5e5; /* Couleur du texte pour une bonne lisibilité */
+    /* Anciennes couleurs :
+       background-color: #070707; 
+       color: #e5e5e5;
+    */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #69b668; /* Couleur d'en-tête vive et accrocheuse */
+    color: #20232a; /* Texte sombre pour contraster avec le fond clair */
+    /* Anciennes couleurs :
+       background-color: #3ad9a2; 
+       color: #070707;
+    */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #20232a; /* Texte sombre pour les liens dans l'en-tête */
+    text-decoration: none;
+    /* Ancienne couleur :
+       color: #070707;
+    */
+}
+
+nav ul li a:hover {
+    color: #589957; /* Lien survolé en couleur légèrement plus foncée */
+    /* Ancienne couleur :
+       color: #ace1ce;
+    */
+}
+
+main {
+    padding: 20px;
+    background-color: #20232a; /* Fond du contenu principal */
+    text-align: center;
+    /* Ancienne couleur :
+       background-color: #070707;
+    */
+}
+
+footer {
+    background-color: #69b668; /* Fond du pied de page */
+    color: #20232a; /* Texte sombre pour contraster avec le fond clair */
+    /* Anciennes couleurs :
+       background-color: #3ad9a2; 
+       color: #070707;
+    */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+button {
+    background-color: #477c46; /* Bouton avec une couleur douce et invitante */
+    color: #20232a; /* Texte sombre sur le bouton pour un bon contraste */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    /* Ancienne couleur :
+       background-color: #73ddb8;
+       color: #070707;
+    */
+}
+
+button:hover {
+    background-color: #366035; /* Couleur du bouton au survol */
+    /* Ancienne couleur :
+       background-color: #ace1ce;
+    */
+}
+
+/* Styles pour l'éditeur de code */
+#editor {
+    background-color: #20232a; /* Fond sombre de l'éditeur */
+    color: #e5e5e5; /* Texte clair pour l'éditeur */
+    border: 1px solid #69b668; /* Bordure pour définir l'éditeur */
+    font-family: 'Courier New', Courier, monospace;
+    height: 200px;
+    width: 100%;
+    /* Ancienne couleur :
+       background-color: #070707;
+       border: 1px solid #3ad9a2;
+    */
+}
