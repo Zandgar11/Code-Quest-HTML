@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #69b668; /* Couleur d'en-tête vive et accrocheuse */
+    background-image: url("..//images/bannière.png");
     color: #20232a; /* Texte sombre pour contraster avec le fond clair */
     /* Anciennes couleurs :
        background-color: #3ad9a2; 
