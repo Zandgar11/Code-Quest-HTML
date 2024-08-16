@@ -60,6 +60,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
+/* Styles pour les sections */
 section {
     margin-bottom: 20px;
 }
@@ -70,7 +71,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Styles pour le défi */
+/* Styles pour les zones de texte */
 textarea {
     width: 100%;
     padding: 10px;
@@ -78,8 +79,11 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: monospace; /* Police pour l'éditeur de code */
+    font-size: 16px; /* Taille de police confortable */
+    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
 }
 
+/* Styles pour les boutons */
 button {
     background-color: #69b668; /* Couleur de fond du bouton */
     color: #fff; /* Couleur du texte du bouton */
@@ -88,16 +92,40 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
 }
 
 button:hover {
     background-color: #589957; /* Couleur de fond du bouton au survol */
 }
 
-/* Résultats du défi */
+/* Styles pour les résultats des défis */
 #result {
     margin-top: 10px;
     font-weight: bold;
+}
+
+/* Styles pour les messages d'erreur ou de succès */
+#error, #success {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#error {
+    color: #e5e5e5; /* Couleur du texte d'erreur */
+    background-color: #ffdddd; /* Fond rose clair pour les erreurs */
+    border: 1px solid #ffaaaa; /* Bordure rose clair pour les erreurs */
+}
+
+#success {
+    color: #20232a; /* Couleur du texte de succès */
+    background-color: #d4edda; /* Fond vert clair pour le succès */
+    border: 1px solid #c3e6cb; /* Bordure verte claire pour le succès */
+    text-align: center;
+    padding: 20px;
 }
 
 /* Styles pour le pied de page */
@@ -109,19 +137,4 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-/* Styles pour la page de succès */
-#success {
-    text-align: center;
-    padding: 20px;
-}
-
-#success h1 {
-    color: #69b668; /* Couleur du texte de succès */
-}
-
-#success p {
-    font-size: 18px;
-    margin-top: 10px;
 }
