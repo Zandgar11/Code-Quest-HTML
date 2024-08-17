@@ -137,10 +137,21 @@ footer {
     bottom: 0;
 }
 
-.discord-widget {
-    margin: 20px auto;
-    border: 1px solid #00ff00;
-    border-radius: 4px;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    background-color: #000000;
+}
+
+.discord-link a {
+    color: #00ff00;
+    text-decoration: none;
+    border: 1px solid #00ff00;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.discord-link a:hover {
+    background-color: #333333;
 }
