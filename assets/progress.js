@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Redirige l'utilisateur s'il n'a pas complété le chapitre précédent
         if (!chapter1Completed) {
-            window.location.href = "chapter_1.html"; // Redirige vers le chapitre précédent
+            window.location.href = "chapters/chapter_1.html"; // Redirige vers le chapitre précédent
         }
     } else {
         window.location.href = "login.html"; // Redirige vers la page de connexion
