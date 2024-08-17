@@ -1,73 +1,61 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapitre 1 : Variables et Opérations</title>
+    <title>Chapitre 2 : Boucles, Conditions et Fonctions</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="icon" href="../images/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+    <script src="../assets/script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Chapitre 1 : Variables et Opérations</h1>
+        <h1>Chapitre 2 : Boucles, Conditions et Fonctions</h1>
     </header>
     <main>
         <section>
-            <h2>Introduction aux Variables</h2>
-            <p>Une variable est un espace de mémoire utilisé pour stocker une valeur qui peut être utilisée et modifiée au cours du programme.</p>
-            <pre><code>x = 10  # x est une variable contenant la valeur 10</code></pre>
+            <h2>Introduction aux Boucles</h2>
+            <p>Les boucles permettent d'exécuter un bloc de code plusieurs fois. Bien que nous ne couvrions pas encore toutes les boucles, nous allons vous montrer comment utiliser une boucle <code>for</code> en utilisant les concepts appris dans le Chapitre 1.</p>
+            
+            <h3>Boucle <code>for</code> simple</h3>
+            <pre><code>for i in range(5):
+    print(i)  # Affiche les nombres de 0 à 4</code></pre>
+            <p><strong>Explication</strong> : Cette boucle affiche les nombres de 0 à 4. Le mot-clé <code>range(5)</code> génère une séquence de nombres de 0 à 4.</p>
         </section>
 
         <section>
-            <h2>Types de Données en Python</h2>
-            <p>Python prend en charge plusieurs types de données de base :</p>
-            <ul>
-                <li><strong>int</strong> : Nombre entier. Ex: <code>x = 5</code></li>
-                <li><strong>float</strong> : Nombre à virgule flottante. Ex: <code>y = 3.14</code></li>
-                <li><strong>str</strong> : Chaîne de caractères. Ex: <code>nom = "Alice"</code></li>
-                <li><strong>bool</strong> : Valeur booléenne (Vrai ou Faux). Ex: <code>est_vrai = True</code></li>
-            </ul>
-            <p>Vous pouvez vérifier le type d'une variable en utilisant la fonction <code>type()</code> :</p>
-            <pre><code>type(x)  # Retourne <class 'int'></code></pre>
+            <h2>Introduction aux Conditions</h2>
+            <p>Les conditions permettent de diriger le flux du programme en fonction de certaines valeurs. Voici comment utiliser une condition <code>if</code> avec des variables.</p>
+            
+            <pre><code>x = 10
+if x > 5:
+    print("x est supérieur à 5")
+else:
+    print("x est inférieur ou égal à 5")</code></pre>
+            <p><strong>Explication</strong> : Cette condition vérifie si <code>x</code> est supérieur à 5 et affiche un message en conséquence.</p>
         </section>
 
         <section>
-            <h2>Opérations de Base avec les Variables</h2>
-            <p>En Python, vous pouvez effectuer des opérations arithmétiques de base comme :</p>
-            <ul>
-                <li><code>+</code> : Addition</li>
-                <li><code>-</code> : Soustraction</li>
-                <li><code>*</code> : Multiplication</li>
-                <li><code>/</code> : Division</li>
-                <li><code>%</code> : Modulo (reste de la division)</li>
-            </ul>
-            <pre><code>a = 10
-b = 3
-somme = a + b  # Résultat : 13
-produit = a * b  # Résultat : 30
-reste = a % b  # Résultat : 1</code></pre>
+            <h2>Fonctions Simples</h2>
+            <p>Nous allons maintenant créer une fonction simple en utilisant les concepts de variables et opérations. Vous allez écrire une fonction pour additionner deux nombres.</p>
+            
+            <pre><code>def additionner(a, b):
+    return a + b</code></pre>
+            <p><strong>Explication</strong> : La fonction <code>additionner</code> prend deux paramètres, les additionne et retourne le résultat.</p>
         </section>
 
         <section>
-            <h2>Défi 1 : Modification d'une variable</h2>
-            <p>Modifiez la valeur de la variable <code>x</code> pour qu'elle soit égale à <code>20</code>.</p>
-            <textarea id="editor" rows="3">x = </textarea>
-            <button id="submitBtn">Soumettre</button>
-            <p id="result"></p>
-        </section>
-
-        <section>
-            <h2>Défis supplémentaires</h2>
-            <p>Essayez ces défis supplémentaires pour consolider votre apprentissage :</p>
-
-            <!-- Défi supplémentaire 1 -->
-            <h3>Défi 2 : Multiplication de variables</h3>
-            <p>Créez deux variables, <code>a</code> et <code>b</code>, avec les valeurs <code>5</code> et <code>3</code>, puis multipliez-les ensemble et stockez le résultat dans une variable <code>resultat</code>.</p>
-            <textarea id="additional-editor" rows="3">a = </textarea>
-            <button id="submitAdditionalBtn">Soumettre</button>
-            <p id="additional-result"></p>
+            <h2>Défi</h2>
+            <p>Écrivez une fonction <code>compte_pairs(n)</code> qui retourne le nombre de nombres pairs de 1 à <code>n</code>. Utilisez des boucles et des conditions.</p>
+            
+            <div id="editor" style="height: 200px; width: 100%;">
+def compte_pairs(n):
+    # Écrivez votre code ici
+    return 0
+            </div>
+            <button id="submit-code">Soumettre</button>
+            <p id="feedback"></p>
         </section>
     </main>
     <footer>
@@ -76,9 +64,31 @@ reste = a % b  # Résultat : 1</code></pre>
             <div class="discord-link">
                 <a href="https://discord.gg/as4asF6XeE" target="_blank">Rejoindre notre Discord</a>
             </div>
-        </div> 
+        </div>
     </footer>
-    <script src="../assets/script.js"></script>
+    
+    <script>
+        // Initialise l'éditeur Ace
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+
+        // Gestionnaire pour le bouton de soumission
+        document.getElementById('submit-code').addEventListener('click', function() {
+            let userCode = editor.getValue();
+            try {
+                // Crée une nouvelle fonction à partir du code de l'utilisateur
+                let func = new Function('return ' + userCode)();
+                // Teste la fonction avec un exemple
+                if (typeof func === 'function' && func(10) === 5) {
+                    document.getElementById('feedback').innerText = 'Bravo ! Votre fonction est correcte.';
+                } else {
+                    document.getElementById('feedback').innerText = 'Essayez encore.';
+                }
+            } catch (e) {
+                document.getElementById('feedback').innerText = 'Erreur dans votre code. Vérifiez la syntaxe.';
+            }
+        });
+    </script>
 </body>
 </html>
-
