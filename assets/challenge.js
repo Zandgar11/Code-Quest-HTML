@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Rediriger vers la page des défis supplémentaires après 2 secondes
                 setTimeout(function() {
-                    window.location.href = "chapters/chapter_1_success.html";
+                    window.location.href = "chapter_1_success.html";
                 }, 2000);
             } else {
                 result.textContent = "Essayez encore ! Ce n'est pas la bonne valeur.";
