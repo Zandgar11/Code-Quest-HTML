@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 result.textContent = "Bravo ! Vous avez correctement modifié la variable.";
                 result.style.color = "#69b668"; // Couleur du texte en cas de succès
                 setTimeout(function() {
-                    window.location.href = "chapters/chapter_1_success.html";
+                    window.location.href = "chapter_1_success.html";
                 }, 2000);
             } else {
                 result.textContent = "Essayez encore ! Ce n'est pas la bonne valeur.";
