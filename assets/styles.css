@@ -7,27 +7,25 @@
 
 /* Styles de base pour le corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e5e5e5; /* Fond clair pour le site */
-    color: #20232a; /* Texte sombre pour une bonne lisibilité */
+    font-family: 'Courier New', Courier, monospace; /* Police de terminal */
+    background-color: #20232a; /* Fond sombre pour un effet terminal */
+    color: #00ff00; /* Texte vert pour le style rétro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Styles pour l'en-tête */
 header {
-    background-image: url("../images/bannière.png"); /* Image de fond */
-    background-size: cover; /* Adapter l'image de fond */
-    color: #20232a; /* Texte sombre */
-    padding: 20px;
+    background-color: #000000; /* Fond noir pour l'en-tête */
+    padding: 10px 20px;
     text-align: center;
-}
-
-header .logo {
-    width: 80px;
-    vertical-align: middle;
+    border-bottom: 1px solid #00ff00; /* Ligne verte pour séparer l'en-tête */
 }
 
 header h1 {
     margin: 10px 0;
+    color: #00ff00; /* Couleur verte pour le texte de l'en-tête */
 }
 
 header nav ul {
@@ -41,9 +39,8 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #69b668; /* Couleur des liens */
+    color: #00ff00; /* Couleur des liens */
     text-decoration: none;
-    font-weight: bold;
 }
 
 header nav ul li a:hover {
@@ -55,9 +52,11 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff; /* Fond blanc pour le contenu */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-color: #000000; /* Fond noir pour le contenu */
+    color: #00ff00; /* Texte vert pour le contenu */
+    border: 1px solid #00ff00; /* Bordure verte */
+    border-radius: 4px;
+    flex-grow: 1;
 }
 
 /* Styles pour les sections */
@@ -66,7 +65,7 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #69b668; /* Souligner les titres des sections */
+    border-bottom: 1px solid #00ff00; /* Ligne verte pour les titres */
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
@@ -76,33 +75,34 @@ textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: monospace; /* Police pour l'éditeur de code */
-    font-size: 16px; /* Taille de police confortable */
-    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+    background-color: #000000; /* Fond noir pour l'éditeur de code */
+    color: #00ff00; /* Texte vert pour l'éditeur de code */
+    border: 1px solid #00ff00; /* Bordure verte */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 /* Styles pour les boutons */
 button {
-    background-color: #69b668; /* Couleur de fond du bouton */
-    color: #fff; /* Couleur du texte du bouton */
-    border: none;
+    background-color: #000000; /* Fond noir pour les boutons */
+    color: #00ff00; /* Texte vert pour les boutons */
+    border: 1px solid #00ff00; /* Bordure verte */
     padding: 10px 20px;
-    border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #589957; /* Couleur de fond du bouton au survol */
+    background-color: #333333; /* Fond gris foncé au survol */
 }
 
 /* Styles pour les résultats des défis */
 #result {
     margin-top: 10px;
     font-weight: bold;
+    color: #00ff00; /* Texte vert pour les résultats */
 }
 
 /* Styles pour les messages d'erreur ou de succès */
@@ -115,25 +115,23 @@ button:hover {
 }
 
 #error {
-    color: #e5e5e5; /* Couleur du texte d'erreur */
-    background-color: #ffdddd; /* Fond rose clair pour les erreurs */
-    border: 1px solid #ffaaaa; /* Bordure rose clair pour les erreurs */
+    color: #ff0000; /* Texte rouge pour les erreurs */
+    background-color: #330000; /* Fond rouge foncé pour les erreurs */
 }
 
 #success {
-    color: #20232a; /* Couleur du texte de succès */
-    background-color: #d4edda; /* Fond vert clair pour le succès */
-    border: 1px solid #c3e6cb; /* Bordure verte claire pour le succès */
+    color: #00ff00; /* Texte vert pour le succès */
+    background-color: #003300; /* Fond vert foncé pour le succès */
     text-align: center;
-    padding: 20px;
 }
 
 /* Styles pour le pied de page */
 footer {
-    background-color: #20232a; /* Fond sombre pour le pied de page */
-    color: #fff; /* Texte clair */
+    background-color: #000000; /* Fond noir pour le pied de page */
+    color: #00ff00; /* Texte vert */
     text-align: center;
     padding: 10px 0;
+    border-top: 1px solid #00ff00; /* Ligne verte en haut du pied de page */
     position: fixed;
     width: 100%;
     bottom: 0;
