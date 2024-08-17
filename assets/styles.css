@@ -136,3 +136,11 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.discord-widget {
+    margin: 20px auto;
+    border: 1px solid #00ff00;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #000000;
+}
