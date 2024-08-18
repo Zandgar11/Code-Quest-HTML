@@ -1,3 +1,5 @@
+//progress.js
+
 document.addEventListener("DOMContentLoaded", function() {
     const currentUser = localStorage.getItem("currentUser");
     

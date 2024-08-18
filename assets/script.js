@@ -1,3 +1,5 @@
+//script.js
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("CodeQuest est prêt!");
 

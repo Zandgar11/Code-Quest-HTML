@@ -1,3 +1,5 @@
+//challenge.js
+
 document.addEventListener("DOMContentLoaded", function() {
     const submitBtn = document.getElementById("submitBtn");
     const editor = document.getElementById("editor");

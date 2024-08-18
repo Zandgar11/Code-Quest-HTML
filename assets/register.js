@@ -1,3 +1,5 @@
+//register.js
+
 document.addEventListener("DOMContentLoaded", function() {
     const registerForm = document.getElementById("registerForm");
     const messageDiv = document.getElementById("message");
