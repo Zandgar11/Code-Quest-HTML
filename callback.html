@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeQuest - Callback</title>
+    <script src="assets/auth.js"></script>
+</head>
+<body>
+    <h1>Connexion en cours...</h1>
+    <script>
+        auth0.parseHash((err, authResult) => {
+            if (authResult && authResult.accessToken && authResult.idToken) {
+                auth0.client.userInfo(authResult.accessToken, (err, user) => {
+                    if (user) {
+                        localStorage.setItem('currentUser', JSON.stringify(user));
+                        window.location.href = 'index.html';
+                    }
+                });
+            } else if (err) {
+                console.error(err);
+                alert('Erreur d\'authentification.');
+            }
+        });
+    </script>
+</body>
+</html>
