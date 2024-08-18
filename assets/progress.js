@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    
+    const currentUserString = localStorage.getItem("currentUser");
+    let currentUser = null;
+
+    try {
+        currentUser = JSON.parse(currentUserString);
+    } catch (e) {
+        console.error("Invalid JSON in currentUser", e);
+    }
+
     if (currentUser) {
         const chapter1Completed = localStorage.getItem(currentUser.sub + "-chapter1-completed");
 
