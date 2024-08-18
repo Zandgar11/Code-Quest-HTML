@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "chapters/chapter_1.html"; // Redirige vers le chapitre précédent
         }
     } else {
-        window.location.href = "login.html"; // Redirige vers la page de connexion
+        //window.location.href = "login.html"; // Redirige vers la page de connexion
     }
 });
