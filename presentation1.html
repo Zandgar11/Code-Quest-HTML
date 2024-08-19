@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation Technique - CodeQuest</title>
+    <style>
+        body {
+            background-color: #20232a;
+            color: #e5e5e5;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 50px;
+        }
+        h1 {
+            color: #69b668;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        h2 {
+            color: #589957;
+            margin-top: 30px;
+            font-size: 2em;
+        }
+        p, ul {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .code {
+            background-color: #282c34;
+            color: #e5e5e5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aspects Techniques de CodeQuest</h1>
+    
+    <h2>1. Structure du Projet</h2>
+    <p>Le projet est structuré avec des fichiers HTML pour chaque chapitre, un fichier CSS centralisé pour les styles, et des fichiers JavaScript pour les fonctionnalités.</p>
+
+    <h2>2. Technologies Utilisées</h2>
+    <ul>
+        <li><strong>HTML/CSS :</strong> Pour la structure et le design des pages.</li>
+        <li><strong>JavaScript :</strong> Pour l'interactivité, incluant la gestion des défis et des comptes utilisateurs.</li>
+        <li><strong>Cookies :</strong> Pour la gestion des sessions utilisateur et la sauvegarde de l'avancement.</li>
+    </ul>
+
+    <h2>3. Gestion des Comptes Utilisateurs</h2>
+    <p>Nous utilisons les cookies pour stocker les informations des utilisateurs. Voici un exemple de code pour la gestion des cookies :</p>
+    <div class="code">
+        <pre>
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i=0;i < ca.length;i++) {
+        let c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+        </pre>
+    </div>
+
+    <h2>4. Stockage de l'Avancement</h2>
+    <p>L'avancement des utilisateurs est enregistré dans les cookies pour persister les données entre les sessions.</p>
+
+    <h2>5. Défis et Validation</h2>
+    <p>Les défis sont validés par des scripts JavaScript côté client. Voici un exemple de vérification simple pour un défi :</p>
+    <div class="code">
+        <pre>
+submitBtn.addEventListener("click", function() {
+    const code = editor.value.trim();
+    if (code === "x = 20") {
+        result.textContent = "Bravo !";
+        setTimeout(() => window.location.href = "next_chapter.html", 2000);
+    } else {
+        result.textContent = "Essayez encore !";
+    }
+});
+        </pre>
+    </div>
+
+    <h2>6. Gestion des Styles</h2>
+    <p>Le design du projet est inspiré des anciens terminaux, avec des couleurs sombres et une police monospaced. Le CSS est écrit pour un style minimaliste et rétro.</p>
+</body>
+</html>

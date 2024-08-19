@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation Technique - CodeQuest</title>
+    <style>
+        body {
+            background-color: #20232a;
+            color: #e5e5e5;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 50px;
+        }
+        h1 {
+            color: #69b668;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        h2 {
+            color: #589957;
+            margin-top: 30px;
+            font-size: 2em;
+        }
+        p, ul {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .code {
+            background-color: #282c34;
+            color: #e5e5e5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aspects Techniques de CodeQuest</h1>
+    
+    <h2>1. Structure du Projet</h2>
+    <p>Le projet est organisé en plusieurs fichiers HTML pour chaque chapitre, avec un fichier CSS centralisé pour les styles, et des fichiers JavaScript pour la logique.</p>
+
+    <h2>2. Technologies Utilisées</h2>
+    <ul>
+        <li><strong>HTML/CSS :</strong> Pour la structure et le design des pages.</li>
+        <li><strong>JavaScript :</strong> Pour l'interactivité, y compris la vérification des défis et la gestion des comptes.</li>
+        <li><strong>Firebase :</strong> Pour la gestion des comptes utilisateurs, l'authentification et la sauvegarde de l'avancement.</li>
+        <li><strong>Cookies :</strong> Pour stocker les informations de session utilisateur.</li>
+    </ul>
+
+    <h2>3. Gestion des Comptes Utilisateurs</h2>
+    <p>Nous utilisons Firebase pour l'authentification sécurisée, intégrée via l'API Firebase. Le code suivant initialise Firebase :</p>
+    <div class="code">
+        <pre>
+// Configuration de Firebase
+const firebaseConfig = {
+  apiKey: "Votre-API-Key",
+  authDomain: "code-quest.firebaseapp.com",
+  projectId: "code-quest",
+  storageBucket: "code-quest.appspot.com",
+  messagingSenderId: "123456789",
+  appId: "1:123456789:web:abcdefg",
+};
+
+// Initialisation de Firebase
+const app = initializeApp(firebaseConfig);
+        </pre>
+    </div>
+
+    <h2>4. Stockage de l'Avancement</h2>
+    <p>L'avancement des utilisateurs est stocké dans Firebase Realtime Database. Les cookies sont utilisés pour suivre la session utilisateur, permettant une expérience personnalisée lors de la reconnexion.</p>
+
+    <h2>5. Défis et Validation</h2>
+    <p>Les défis sont validés via JavaScript. Voici un exemple de vérification simple pour les défis :</p>
+    <div class="code">
+        <pre>
+submitBtn.addEventListener("click", function() {
+    const code = editor.value.trim();
+    if (code === "x = 20") {
+        result.textContent = "Bravo !";
+        setTimeout(() => window.location.href = "next_chapter.html", 2000);
+    } else {
+        result.textContent = "Essayez encore !";
+    }
+});
+        </pre>
+    </div>
+
+    <h2>6. Gestion des Styles</h2>
+    <p>Le design du projet est inspiré des anciens terminaux, avec des couleurs sombres et une police monospaced. Le CSS est écrit pour un style minimaliste et rétro.</p>
+</body>
+</html>
